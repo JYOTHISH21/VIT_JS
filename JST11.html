@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                background-image: linear-gradient(rgb(229, 255, 0), rgb(247, 0, 255));
+            }
+            div
+            {
+                color:red;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            function valid()
+            {
+                var n  =document.forms["f1"]["name"].value;
+                var e  =document.forms["f1"]["email"].value;
+                var w  =document.forms["f1"]["ws"].value;
+                var ad =document.forms["f1"]["msg"].value;
+                var rws=document.forms["f1"]["rws"].value;
+                var a  =document.forms["f1"]["age"].value;
+                var ph =document.forms["f1"]["ph"].value;
+                var st =document.forms["f1"]["cy"].value;
+
+                if(n==null || n=="")
+                {
+                    document.getElementById("i1").innerText="Poor";
+                    document.getElementById("name").style.border="2px solid red";
+                }
+                if(e==null || e=="")
+                {
+                    document.getElementById("i2").innerText="Poor";
+                    document.getElementById("email").style.border="2px solid red";
+                }
+                if(w==null || w=="")
+                {
+                    document.getElementById("i3").innerText="Poor";
+                    document.getElementById("ws").style.border="2px solid red";
+                }
+                if(rws==null || rws=="" || rws!=ws)
+                {
+                    document.getElementById("i4").innerText="Poor or Mismatch";
+                    document.getElementById("rws").style.border="2px solid red";
+                }
+                if(a==null || a=="")
+                {
+                    document.getElementById("i6").innerText="Poor";
+                    document.getElementById("age").style.border="2px solid red";
+                }
+                if(ph==null || ph=="")
+                {
+                    document.getElementById("i7").innerText="Poor";
+                    document.getElementById("ph").style.border="2px solid red";
+                }
+                if(st==null || st=="")
+                {
+                    document.getElementById("i9").innerText="Poor";
+                    document.getElementById("cy").style.border="2px solid red";
+                }
+                if(ad==null || ad=="")
+                {
+                    document.getElementById("i8").innerText="Poor";
+                    document.getElementById("msg").style.border="2px solid red";
+                }
+            }
+
+        </script>
+
+        <h1 style="color: blue; text-align: center;">Registration Form</h1>
+        <br>
+        <table>
+        <form name="f1" id="f1" action="#" onsubmit="valid();return false">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name"> </td>
+            <td><div id="i1"></div></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="text" id="email"></td>
+            <td><div id="i2"></div></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="ws"> </td>
+            <td><div id="i3"></div></td>
+        </tr>
+
+        <tr>
+            <td>Re-enter Password:</td>
+            <td><input type="password" id="rws"> </td>
+            <td><div id="i4"></div></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" id="m" name="gender" value="m">
+                 <label for="m">Male</label><br> </td>
+            <td><div id="i5"></div></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="radio" id="f" name="gender" value="f">
+                 <label for="f">Female</label><br></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="number" id="age"> </td>
+            <td><div id="i6"></div></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><input type="text" id="ph"> </td>
+            <td><div id="i7"></div></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" id="msg"> </td>
+            <td><div id="i8"></div></td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><input type="country" id="cy"> </td>
+            <td><div id="i9"></div></td>
+        </tr>
+
+
+        <tr>
+            <td>
+                Languages Known:
+            </td>
+            <td>
+                <input type="checkbox" id="lang" value="eng">English
+                <input type="checkbox" id="lang" value="tam">Tamil
+                <input type="checkbox" id="lang" value="mal">Malayalam
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" id="ack" value="s" checked>I declare that all informations are correct</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right;">Login to <a href="#a">Etnus</a> Website</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2"><input type="submit" value="Register" style="background-color: red; border-radius: 45%;">  </td>
+        </tr>
+        </form>
+        </table>
+    </body>
+</html>

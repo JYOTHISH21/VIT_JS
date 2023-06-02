@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+              $("#start").click(function(){
+                $("#ig").animate({left: '850px'}, 5000);
+              });
+              
+              $("#stop").click(function(){
+                $("#ig").stop();
+              }); 
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class="row">
+                <img src="train.jpeg" id="ig" style="height:200px;width:300px;position:relative;">
+            </div>
+            
+            <div class="row">
+                <span class="col-md-12" style="text-align: center;"><h2 style="color: blue; font-weight: bold;"> Click the following buttons to handle animations</h2></button></span>
+            </div>
+
+            <div class="row">
+                <span class="col-md-6" style="text-align: right;"><button id="start">Start</button></span>
+                <span class="col-md-6" style="text-align: left;" ><button id="stop">Stop</button></span>
+
+            </div>
+        </div>     
+
+    </body>
+</html>

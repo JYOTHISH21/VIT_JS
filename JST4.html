@@ -1,0 +1,58 @@
+<html>
+    <head>
+        
+        <link href="T3.css" rel="stylesheet">
+        <script>
+            function valid()
+            {
+                var n=document.getElementById('un').value;
+                var p=document.getElementById('pwd').value;
+                if(n==null || n=="")
+                {
+                    document.getElementById("i1").innerText="Enter Username";
+                    document.getElementById("un").style.border="2px solid red";
+                }
+                if(p==null || p=="")
+                {
+                    document.getElementById("i2").innerText="Enter Password";
+                    document.getElementById("pwd").style.border="2px solid red";
+                }
+
+            }
+        </script>
+    </head>
+
+    <body>
+        
+
+        <div id="wrapper">
+            <div class="main-content">
+                <div class="header">
+                    <img src="https://i.imgur.com/zqpwkLQ.png" />
+                </div>
+                <div class="l-part">
+                    <input type="text" placeholder="Username" class="input-1" id="un"/>
+                    <br>
+                    <div id="i1"></div>
+                <div class="overlap-text">
+                    <input type="password" placeholder="Password" class="input-2" id="pwd"/>  
+                    <br>
+                    <div id="i2"></div>  
+                </div>
+                    <input type="button" value="Log in" class="btn" onclick="valid()"/>
+                </div>
+                    
+                    <br>
+                    <input type="checkbox">Remember me <a href="#" style="align-self: left;">Forgot Password?</a>
+                </div>
+                
+                </div>
+            </div>
+            <div class="sub-content">
+                <div class="s-part">
+                Don't have an account? <a href="#">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

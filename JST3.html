@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div
+            {
+                color:red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            function valid()
+            {
+                var n=document.forms["f1"]["name"].value;
+                var e=document.forms["f1"]["email"].value;
+                var w=document.forms["f1"]["ws"].value;
+                var m=document.forms["f1"]["msg"].value;
+                if(n==null || n=="")
+                {
+                    name();
+                }
+                if(e==null || e=="")
+                {
+                    email();
+                }
+                if(w==null || w=="")
+                {
+                     ws()
+                }
+                if(m==null || m=="")
+                {
+                     msg();    
+                }
+            }
+            function name()
+            {
+                document.getElementById("i1").innerText="Enter valid name";
+                document.getElementById("name").style.border="2px solid red";
+            }
+            function email()
+            {
+                document.getElementById("i2").innerText="Enter valid Email";
+                document.getElementById("email").style.border="2px solid red";
+            }
+            function ws()
+            {
+                document.getElementById("i3").innerText="Enter valid website";
+                document.getElementById("ws").style.border="2px solid red";
+            }
+            function msg()
+            {
+                document.getElementById("i4").innerText="Enter valid message";
+                document.getElementById("msg").style.border="2px solid red";
+            }
+
+        </script>
+        <table>
+        <form name="f1" id="f1" action="#" onsubmit="valid();return false">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name"> </td>
+            <td><div id="i1"></div></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="text" id="email"></td>
+            <td><div id="i2"></div></td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td><input type="text" id="ws"> </td>
+            <td><div id="i3"></div></td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td><input type="text" id="msg"> </td>
+            <td><div id="i4"></div></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit">  </td>
+        </tr>
+        </form>
+        </table>
+    </body>
+</html>

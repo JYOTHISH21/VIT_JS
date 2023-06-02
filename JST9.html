@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            table{
+                margin-bottom: auto;
+                margin-left: auto; 
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+
+<body style="background-color: rgb(189, 2, 71);;">
+    
+    <table style="background-color: rgb(151, 0, 55); color: white;">
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <input type="text" id="nm">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="email" id="em">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                Male<input type="radio" id="g" value="m">
+                Female<input type="radio" id="g" value="f">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>Language:</td>
+            <td><select id="lang">
+                    <option value="English">English</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Malayalam">Malayalam</option>
+
+                </select>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>Zipcode:</td>
+            <td><input type="text" id="zc"></td>
+        </tr>
+        <tr>
+            <td>About</td>
+            <td><textarea id="ab" cols="30" rows="5"></textarea></td>
+        </tr>
+
+        <tr style="text-align: center;"> 
+            <td colspan="2"><input type="submit" value="Register" style="width: 300px; color: black;"></td>
+        </tr>
+    </table>
+</body>
+</html>

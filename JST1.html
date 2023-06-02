@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+              #content {
+                    width: 280px;
+                    height: 55%;
+                    margin: 250px auto;
+                    background-color: #eeebeb;
+                    border: 2px solid #e6e6e6;
+                    padding: 40px 40px;
+                }
+        </style>
+    </head>
+
+    <body>
+
+        <script>
+            function date()
+            {
+                const d = new Date();
+                var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                var s=(d.getDate()+"/"+month[d.getMonth()]+"/"+d.getFullYear());
+                document.getElementById("dt").innerHTML = s;
+            }
+            
+            function time()
+            {
+                const d = new Date();
+                document.getElementById("time").innerHTML = d.toUTCString();
+            }
+        </script>
+
+        <h1 style="text-align: center;">Time Function demonstration</h1>
+        <div style="text-align: center;" id="content">
+            <button onclick="date()"> Show Date </button>
+            <div id="dt"></div>
+            <button onclick="time()"> Show Time </button>
+            <div id="time"></div>
+        </div>
+
+    </body>
+</html>

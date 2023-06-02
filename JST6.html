@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function arr()
+            {
+                var n=document.getElementById('inp').value;
+                const r=n.split("");
+
+                // Joining the array elements
+                document.getElementById('res').innerText="Result is "+ r.sort().join("");
+            }
+        </script>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            Enter a String:
+            <input type="text" id="inp"/>
+            <br> <br> <br>
+            <button onclick="arr()">Arrange</button>
+            <br><br>
+            <div id="res"></div>
+
+        </div>
+
+    </body>
+</html>

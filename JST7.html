@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script>
+            let n1=document.forms["f1"]["n1"].value;
+            let n2=document.forms["f1"]["n2"].value;
+
+            function mul()
+            {
+                let n1=document.forms["f1"]["n1"].value;
+                let n2=document.forms["f1"]["n2"].value;
+                var r=n1*n2;
+                document.getElementById("res").innerHTML="The result is: <br> "+r;
+            }
+
+            function div()
+            {
+                let n1=document.forms["f1"]["n1"].value;
+                let n2=document.forms["f1"]["n2"].value;
+                var r=n1/n2;
+                document.getElementById("res").innerHTML="The result is: <br> "+r;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Calculator</h1>
+        <form name="f1" onsubmit="return false">
+            <table>
+                <tr>
+                    <td>1st Number:</td>
+                    <td><input type="number" id="n1"> </td>
+                </tr>
+
+                <tr>
+                    <td>2nd Number:</td>
+                    <td><input type="number" id="n2"></td>
+                </tr>
+
+            </table>
+            
+            
+            
+             <br>
+
+            <input type="submit" value="Multiply" onclick="mul()">
+            <input type="submit" value="Divide" onclick="div()">
+
+
+        </form>
+        <div id="res"></div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function reverse()
+            {
+                var n=document.getElementById('inp').value;
+                var r=0;
+                while(n>0)
+                {
+                    r=r*10+n%10;
+                    n=Math.floor(n/10);
+                }
+                document.getElementById('res').innerText="Result is "+r;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            Enter a number:
+            <input type="number" id="inp"/>
+            <br> <br> <br>
+            <button onclick="reverse()">Reverse</button>
+            <br><br>
+            <div id="res"></div>
+
+        </div>
+
+    </body>
+</html>
