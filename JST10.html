@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div style="text-align: center;">
+            <h1>JavaScript Array functions</h1>
+            The outputs are in the console
+        </div>
+        <script>
+
+            function check(n) {
+            return n > 21;
+            }
+
+            const arr1 = [21,22,23];
+            const arr2 = [10,20,30,21];
+            const arr3 = arr1.concat(arr2)
+            console.log("concatenation");
+            console.log(arr3);
+
+            console.log("Every: ");
+            console.log(arr3.every((val)=>val>20));
+
+            console.log("Some:");
+            console.log(arr3.some((val)=>val>20));
+
+            console.log("Pop:");
+            console.log(arr3.pop());
+        
+            console.log("Push:");
+            console.log(arr3.push(21));
+
+            console.log("Shift:");
+            console.log(arr3.shift());
+
+
+            console.log("Index:");
+            console.log(arr3.indexOf(21));
+
+            console.log("Find Index:");
+            console.log(arr3.findIndex(check));
+
+            console.log("Last Index:");
+            console.log(arr3.lastIndexOf(21));
+
+            console.log("Find:");
+            console.log(arr3.find(check));
+
+            console.log("Filter:");
+            console.log(arr3.filter(check));
+
+            console.log("Map Square Root:");
+            console.log(arr3.map(Math.sqrt));
+
+            console.log("Copy Within:");
+            console.log(arr3.copyWithin(2,0));
+        </script>
+    </body>
+</html>
